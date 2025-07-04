@@ -1,0 +1,387 @@
+<!DOCTYPE html> <!-- Defines the document type and version of HTML -->
+<html> <!-- Starts the HTML document -->
+<head> <!-- Contains metadata/information about the document -->
+        <!-- Metadata and Base Tags -->
+
+    <!-- <meta> tag: Defines metadata like charset, author, viewport, etc. -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Example HTML document with a variety of elements">
+    <meta name="author" content="TonyGod">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <base> tag: Sets base URL for all relative links on the page -->
+    <base href="https://example.com/" target="_blank">
+
+    <!-- <basefont>: Obsolete tag, was used to define default text style (color, size, font) -->
+    <!-- Not supported in HTML5 — shown here just as an example with a comment -->
+    <!-- <basefont color="blue" size="4" face="Arial"> -->
+
+    <title>HTML Basics with Formatting, Forms, Input, Frames, Images, Audio, Video, Links, Lists, Tables, Styles, Semantics and Meta Info </title> <!-- Title shown on browser tab -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links an external CSS file -->
+</head>
+<body> <!-- Contains all visible content on the web page -->
+
+    <!-- Headings -->
+    <h1>This is an H1 Heading</h1>
+    <h2>This is an H2 Heading</h2>
+    <h3>This is an H3 Heading</h3>
+    <h4>This is an H4 Heading</h4>
+    <h5>This is an H5 Heading</h5>
+    <h6>This is an H6 Heading</h6>
+
+    <!-- Paragraphs and Text Formatting -->
+    <p>No se que poner aqui la verdad.</p>
+    <p>This is a line with a break<br>and this is after the break.</p>
+    <hr>
+    <p>Otro parrafo despues de la linea .</p>
+    <!-- This is a comment -->
+
+    <!-- Inline & Text Formatting -->
+    <p>The <abbr title="United Nations">UN</abbr> was established in 1945.</p>
+    <address>Written by TonyGod. Email: tony@god.com</address>
+    <p>This is <b>bold</b> text.</p>
+    <p>User: <bdi>TonyG</bdi></p>
+    <p><bdo dir="rtl">Right-to-left text.</bdo></p>
+    <p><big>This is big text (obsolete)</big></p>
+    <blockquote cite="https://example.com">This is a blockquote.</blockquote>
+    <center>Centered text (obsolete)</center>
+    <p><cite>Hamlet</cite> by Shakespeare</p>
+    <p><code>print("Hello")</code></p>
+    <p>This is <del>deleted</del> text.</p>
+    <p><dfn>HTML</dfn> is a markup language.</p>
+    <p><em>Emphasized</em> text.</p>
+    <font color="blue">Obsolete font tag</font>
+    <p>This is <i>italic</i> text.</p>
+    <p><ins>Inserted</ins> text.</p>
+    <p>Use <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.</p>
+    <p><mark>Highlighted/Remarcado</mark> text.</p>
+    <p><meter value="0.6">60%</meter></p>
+    <pre>Preformatted     text</pre>
+    <p><label for="progress">Progress:</label>
+    <progress id="progress" value="50" max="100">50%</progress></p>
+    <p><q>Short quotation</q></p>
+    <ruby>語 <rt>ご</rt></ruby>
+    <ruby>漢 <rp>(</rp><rt>hàn</rt><rp>)</rp></ruby>
+    <p><s>Struck-through</s> text.</p>
+    <p><samp>Hola mundo!</samp></p>
+    <p><small>Texto pequeno.</small></p>
+    <strike>Strike-through (obsolete)</strike>
+    <p><strong>Important</strong> text.</p>
+    <p>H<sub>2</sub>O and 10<sup>2</sup></p>
+    <template><p>This is hidden template content.</p></template>
+    <p><time datetime="2025-06-25T20:00">8:00 PM</time></p>
+    <tt>Teletype text (obsolete)</tt>
+    <p>This is <u>underlined</u> text.</p>
+    <p><var>x</var> = 10</p>
+    <p>super<wbr>califragilistic<wbr>expialidocious</p>
+
+    <!-- IFRAME (Modern Frame Element) -->
+    <h3>Embedded Content using &lt;iframe&gt;</h3>
+    <p>Below is an embedded website using an inline frame:</p>
+    <iframe src="https://example.com" width="400" height="200" title="Example Website"></iframe>
+
+    <!-- FORM Elements -->
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="30"></textarea>
+        <br><br>
+
+        <button type="submit">Submit</button>
+        <br><br>
+
+        <label for="car">Choose a car:</label>
+        <select id="car" name="car">
+            <optgroup label="Japanese Cars">
+                <option value="toyota">Toyota</option>
+                <option value="honda">NissanGod</option>
+            </optgroup>
+            <optgroup label="German Cars">
+                <option value="bmw">BMW</option>
+                <option value="audi">Audi</option>
+            </optgroup>
+        </select>
+        <br><br>
+
+        <label for="browser">Choose your browser:</label>
+        <input list="browsers" name="browser" id="browser">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Edge">
+            <option value="Safari">
+        </datalist>
+        <br><br>
+
+        <fieldset>
+            <legend>Account Type</legend>
+            <input type="radio" id="personal" name="type" value="personal">
+            <label for="personal">Personal</label>
+            <input type="radio" id="business" name="type" value="business">
+            <label for="business">Business</label>
+        </fieldset>
+        <br><br>
+
+        <label for="range">Select a number: </label>
+        <input type="range" id="range" name="range" oninput="result.value = range.value">
+        <output name="result" for="range">50</output>
+    </form>
+
+    <!-- Obsolete Frame Elements: Not supported in HTML5 -->
+    <!-- 
+    <frameset cols="50%,50%">
+        <frame src="frame1.html">
+        <frame src="frame2.html">
+        <noframes>
+            Your browser does not support frames.
+        </noframes>
+    </frameset>
+    -->
+
+    <!-- Media & Graphics Section -->
+    <h3>Images and Graphics</h3>
+
+    <!-- Image -->
+    <img src="https://via.placeholder.com/150" alt="Placeholder Image"> <!-- Displays an image -->
+
+    <!-- Image Map -->
+    <img src="https://via.placeholder.com/300x100" usemap="#imagemap" alt="Clickable Image Map"> <!-- Image linked to map -->
+    <map name="imagemap"> <!-- Defines the clickable areas -->
+        <area shape="rect" coords="0,0,100,100" alt="Box 1" href="https://example.com">
+        <area shape="rect" coords="100,0,200,100" alt="Box 2" href="https://example.org">
+    </map>
+
+    <!-- Canvas -->
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid black;">
+        Your browser does not support the canvas element.
+    </canvas> <!-- Drawing area for JavaScript graphics -->
+
+    <!-- Figure and Figcaption -->
+    <figure>
+        <img src="https://via.placeholder.com/150" alt="Sample Figure">
+        <figcaption>This is a caption for the image.</figcaption> <!-- Caption for the image -->
+    </figure>
+
+    <!-- Picture Element -->
+    <picture> <!-- Container for responsive image sources -->
+        <source media="(min-width: 800px)" srcset="https://via.placeholder.com/800x200">
+        <source media="(min-width: 400px)" srcset="https://via.placeholder.com/400x100">
+        <img src="https://via.placeholder.com/200x100" alt="Responsive Image"> <!-- Default fallback -->
+    </picture>
+
+    <!-- SVG Graphic -->
+    <svg width="100" height="100"> <!-- Defines an SVG graphic area -->
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+        <!-- Draws a red circle with black border -->
+    </svg>
+
+    <!-- Multimedia Section -->
+    <h3>Multimedia Section</h3>
+
+    <!-- Audio Element -->
+    <audio controls> <!-- Embeds an audio file with playback controls -->
+        <source src="example-audio.mp3" type="audio/mpeg"> <!-- MP3 audio source -->
+        <source src="example-audio.ogg" type="audio/ogg"> <!-- Fallback OGG audio source -->
+        Your browser does not support the audio element. <!-- Fallback text -->
+    </audio>
+
+    <br><br>
+
+    <!-- Video Element -->
+    <video width="320" height="240" controls> <!-- Embeds a video player with controls -->
+        <source src="example-video.mp4" type="video/mp4"> <!-- MP4 video source -->
+        <source src="example-video.ogg" type="video/ogg"> <!-- Fallback OGG video source -->
+        <track src="subtitles-en.vtt" kind="subtitles" srclang="en" label="English"> <!-- Adds subtitles -->
+        Your browser does not support the video tag. <!-- Fallback text -->
+    </video>
+
+    <!-- Navigation Section -->
+    <h3>Navigation and Links</h3>
+
+    <!-- Navigation Bar -->
+    <nav> <!-- Defines a navigation section with links -->
+        <a href="#top">Go to Top</a> |
+        <a href="#form">Go to Form Section</a> |
+        <a href="https://example.com" target="_blank">External Link</a> <!-- Opens in new tab -->
+    </nav>
+
+    <br>
+
+    <!-- Hyperlink Example -->
+    <p>Visit <a href="https://www.w3schools.com" target="_blank">W3Schools</a> for HTML tutorials.</p> <!-- Defines a link -->
+
+    <!-- Lists Section -->
+    <h3>Lists and Descriptions</h3>
+
+    <!-- Unordered List -->
+    <p>Unordered List Example:</p>
+    <ul> <!-- Defines an unordered list with bullet points -->
+        <li>Apples</li> <!-- List item -->
+        <li>Oranges</li>
+        <li>Bananas</li>
+    </ul>
+
+    <!-- Ordered List -->
+    <p>Ordered List Example:</p>
+    <ol> <!-- Defines an ordered list with numbers -->
+        <li>First Step</li> <!-- List item -->
+        <li>Second Step</li>
+        <li>Third Step</li>
+    </ol>
+
+    <!-- Description List -->
+    <p>Description List Example:</p>
+    <dl> <!-- Defines a description list -->
+        <dt>HTML</dt> <!-- Term or name -->
+        <dd>A markup language for creating web pages.</dd> <!-- Description of the term -->
+
+        <dt>CSS</dt>
+        <dd>A language for describing the style of web pages.</dd>
+    </dl>
+
+    <!-- Directory List (Obsolete) -->
+    <p>Directory List Example (Obsolete):</p>
+    <dir> <!-- Not supported in HTML5; use <ul> instead -->
+        <li>File1.txt</li>
+        <li>File2.txt</li>
+    </dir>
+
+    <!-- Menu List -->
+    <p>Menu List Example:</p>
+    <menu> <!-- Defines a list of commands or options (alternative to <ul>) -->
+        <li><a href="#">Home</a></li> <!-- List item with hyperlink -->
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </menu>
+
+        <!-- Tables Section -->
+    <h3>Table Example with Structure Elements</h3>
+
+    <table border="1"> <!-- Defines a table with visible borders -->
+        <caption>Student Grades</caption> <!-- Defines a caption/title for the table -->
+
+        <!-- Column Grouping -->
+        <colgroup> <!-- Groups columns to apply styles or properties -->
+            <col span="1" style="background-color: #f2f2f2;"> <!-- First column style -->
+            <col span="2" style="background-color: #e6f7ff;"> <!-- Second and third columns style -->
+        </colgroup>
+
+        <thead> <!-- Groups the header content of the table -->
+            <tr> <!-- Defines a table row -->
+                <th>Name</th> <!-- Table header cell -->
+                <th>Subject</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+
+        <tbody> <!-- Groups the main body content of the table -->
+            <tr>
+                <td>Tony</td> <!-- Table data cell -->
+                <td>Math</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>Science</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>Luis</td>
+                <td>History</td>
+                <td>88</td>
+            </tr>
+        </tbody>
+
+        <tfoot> <!-- Groups the footer content of the table -->
+            <tr>
+                <td colspan="2">Average</td> <!-- Cell spans two columns -->
+                <td>87.7</td>
+            </tr>
+        </tfoot>
+    </table>
+
+        <!-- Semantic and Structural Elements Section -->
+    <h3>Semantic and Structural HTML Elements</h3>
+
+    <!-- <style> tag is usually used inside <head>, but here’s an example inline -->
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style> <!-- Defines internal CSS styles -->
+
+    <!-- <div> example -->
+    <div style="border: 1px solid #ccc; padding: 10px;"> <!-- Defines a block-level section -->
+        This is a <strong>div</strong> section with border and padding.
+    </div>
+
+    <!-- <span> example -->
+    <p>This sentence has a <span class="highlight">highlighted word</span> using a span.</p> <!-- Inline section -->
+
+    <!-- <header> example -->
+    <header style="background-color: #f9f9f9; padding: 10px;"> <!-- Page or section header -->
+        <h1>Website Header</h1>
+        <p>Navigation or logo usually goes here.</p>
+    </header>
+
+    <!-- <hgroup> example -->
+    <hgroup> <!-- Groups related headings -->
+        <h2>Article Title</h2>
+        <h3>Article Subtitle</h3>
+    </hgroup>
+
+    <!-- <main> example -->
+    <main> <!-- Main content of the document -->
+        <p>This is the main content area of the page.</p>
+    </main>
+
+    <!-- <section> example -->
+    <section style="background-color: #eef;"> <!-- Defines a themed section -->
+        <h3>Section Title</h3>
+        <p>This is a content section within the main page.</p>
+    </section>
+
+    <!-- <search> example (not widely supported) -->
+    <search> <!-- Defines a search functionality area -->
+        <form>
+            <input type="search" name="q" placeholder="Search this site...">
+            <button type="submit">Search</button>
+        </form>
+    </search>
+
+    <!-- <article> example -->
+    <article> <!-- Self-contained content block -->
+        <h3>News Article</h3>
+        <p>This is an article that can be shared or syndicated.</p>
+    </article>
+
+    <!-- <aside> example -->
+    <aside style="background-color: #f0f0f0; padding: 10px;"> <!-- Sidebar or related content -->
+        <h4>Related Links</h4>
+        <ul>
+            <li><a href="#">External Resource 1</a></li>
+            <li><a href="#">External Resource 2</a></li>
+        </ul>
+    </aside>
+
+    <!-- <details> and <summary> example -->
+    <details> <!-- Hidden expandable content -->
+        <summary>Click to see more info</summary> <!-- Visible label -->
+        <p>This is the hidden content shown after clicking the summary.</p>
+    </details>
+
+    <!-- <dialog> example -->
+    <dialog open> <!-- Dialog box (requires JavaScript to open/close dynamically) -->
+        <p>This is a dialog box.</p>
+    </dialog>
+
+    <!-- <data> example -->
+    <p>Product price: <data value="9.99">$9.99</data></p> <!-- Machine-readable value -->
+
+
+</body>
+</html> 
